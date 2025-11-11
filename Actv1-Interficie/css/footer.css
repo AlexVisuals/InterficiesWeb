@@ -1,0 +1,38 @@
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    border-top: 2px solid var(--color-secondary);
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+footer a {
+    color: var(--color-light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 1.5rem 1rem;
+        margin-top: 2rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
