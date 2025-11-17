@@ -1,3 +1,5 @@
+
+/* Header Styles */
 header {
     background-color: var(--color--background);
     padding: 1rem 2rem;
@@ -37,17 +39,29 @@ header nav a:active {
     color: white;
 }
 
-@media (max-width: 768px) {
-    header {
-        padding: 1rem;
-    }
+/* body Styles */
+body {
 
-    header nav ul {
-        gap: 1rem;
-    }
 
-    header nav a {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-    }
 }
+
+
+
+ /* Footer Styles */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    border-top: 2px solid var(--color-secondary);
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+
