@@ -105,10 +105,9 @@ footer {
     padding: 2rem 1rem;
     margin-top: 3rem;
     font-family: 'Montserrat', sans-serif;
-    border-top: 2px solid var(--color-secondary);
+    height: 10px;
 }
 
 footer p {
-    margin: 0.5rem 0;
     font-size: 0.95rem;
 }
