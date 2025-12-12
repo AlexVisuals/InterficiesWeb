@@ -1,0 +1,86 @@
+/* NAVBAR RESPONSIVE (MOBILE FIRST) */
+
+.site-header {
+    background-color: var(--color-black);
+    padding: 1rem 1.5rem;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: flex-start; /* móvil: contenido a la izquierda */
+    align-items: center;
+}
+
+/* Botón hamburguesa (móvil) */
+.nav-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.nav-toggle-line {
+    width: 1.5rem;
+    height: 0.12rem;
+    background-color: var(--color-primary);
+    border-radius: 999px;
+}
+
+/* Lista de enlaces (móvil: desplegable desde la izquierda) */
+.nav-list {
+    list-style: none;
+    position: absolute;
+    top: 3.5rem;
+    left: 1rem;                /* antes right, ahora left para que salga desde la izquierda */
+    background-color: var(--color-black);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 10rem;
+}
+
+.nav-list.nav-list--open {
+    display: flex;
+}
+
+.nav-list a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.nav-list a:hover {
+    background-color: rgba(255, 255, 255, 0.13);
+    transform: translateY(-0.08rem);
+}
+
+/* ESCRITORIO (>= 768px) */
+@media (min-width: 48rem) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .site-nav {
+        justify-content: center; /* en escritorio centramos el bloque nav */
+    }
+
+    .nav-list {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        padding: 0;
+        border-radius: 0;
+        gap: 2rem;
+    }
+}

@@ -3,11 +3,24 @@ body {
     flex-direction: column;
     min-height: 100vh;
 
+    position: relative;
+    overflow-x: hidden;
+
     background-image: url('../img/abstract-21613_1280.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
 
-    color: var(--color-light);
-    font-family: 'Montserrat', sans-serif;
+/* Capa encima del fondo: leve desenfoque + oscurecer un poco */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    background-repeat: inherit;
+    filter: blur(2px) brightness(0.8);
+    z-index: -1;
 }

@@ -7,29 +7,63 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="site-header">
+    <nav class="site-nav">
+        <!-- Botón hamburguesa (solo se verá en móvil) -->
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+        </button>
 
-    <main>
+        <!-- Lista de enlaces -->
+        <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="site-main">
         <div class="hero-section">
             <div class="text-box">
                 <h1>Welcome to Our Website</h1>
-                <p>This is a sample webpage to demonstrate a basic HTML structure with header, main content, and footer sections.</p>
+                <p>Joel podria responderme los mails o mirar el clash de vez en cuando, al final voy a entrar en contacto 0 como con mi ex contigo </p>
                 <button>Learn More</button>
             </div>
         </div>
+
+        <!-- cards -->
+        <section class="cards-section">
+            <div class="cards-container">
+                <article class="card">
+                    <img src="../img/card1.jpg" alt="Service one" class="card-image">
+                    <h3>Absolute cinema</h3>
+                    <p>Joel un clash?</p>
+                </article>
+
+                <article class="card">
+                    <img src="../img/card2.jpg" alt="Service two" class="card-image">
+                    <h3>Absolute cinema</h3>
+                    <p>Joel un clash?</p>
+                </article>
+
+                <article class="card">
+                    <img src="../img/card3.jpg" alt="Service three" class="card-image">
+                    <h3>Absolute cinema</h3>
+                    <p>Joel un clash?</p>
+                </article>
+            </div>
+        </section>
+
+
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <p>&copy; 2025 Your Company. All rights reserved for Alex.</p>
     </footer>
+<script src="../script/script.js"></script>
 </body>
 </html>
