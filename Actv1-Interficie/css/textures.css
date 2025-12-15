@@ -12,7 +12,7 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Capa encima del fondo: leve desenfoque + oscurecer un poco */
+/* Capa encima del fondo: leve desenfoque i un pco oscurecio*/
 body::before {
     content: "";
     position: fixed;

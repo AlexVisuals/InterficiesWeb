@@ -8,8 +8,9 @@ body {
     flex-direction: column;
 }
 
-/* main  */
+/* main */
 .site-main {
+    /* Flexbox permite que se adapte al tamaño disponible */
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -17,7 +18,7 @@ body {
     padding: 2rem 1.5rem;
 }
 
-/* Hero centrado */
+/* hero (el texto del medio) */
 .hero-section {
     display: flex;
     justify-content: center;
@@ -28,30 +29,35 @@ body {
     background: var(--background-transparent-color);
     color: var(--color-light);
     text-align: center;
+    /* Pading en rem para escalar según el tamaño base */
     padding: 2rem;
+    /* Margen superior relativo que mantiene proporción en todas las pantallas */
     margin-top: 6rem;
     border-radius: 10px;
-    max-width: 600px;
+    /* max-width en porcentaje para evitar que  sea demasiado ancho en pantallas grandes */
+    max-width: 50%;
     width: 100%;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
 }
 
 .text-box h1 {
+    /* Tamaño de texto escalable mediante rem */
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .text-box p {
-    line-height: 1.8;
     margin-bottom: 1rem;
 }
 
 /* Botones */
 button {
-    margin-top: 10px;
+    /* Margen relativo para mantener separación  */
+    margin-top: 1rem;
     color: var(--color-light);
     background: var(--color-primary);
+    /* Padding adaptable */
     padding: 0.6rem 1.2rem;
     border-radius: 6px;
     cursor: pointer;
@@ -62,29 +68,36 @@ button {
 
 button:hover {
     background: var(--color-secondary);
-    transform: translateY(-2px);
+    transform: translateY(-0.2rem);
 }
 
 /* Cards debajo del hero */
 .cards-container {
+    /* Flexbox distribuye las cards automáticamente según el ancho disponible */
     display: flex;
     gap: 1rem;
+    /* Margen se adapta al tamaño de pantalla */
     margin-top: 6rem;
 }
 
 .card {
-    flex: 1 1 0;
+    /* flex permite que las cards ocupen el espacio disponible sin romper el layout */
+    flex: 1 1 auto;
     background: var(--background-transparent-color);
     color: var(--color-light);
     padding: 1.5rem 1rem;
     border-radius: 10px;
 }
 
-/* imagen dentro de cada card*/
+/* imagen dentro de cada card */
 .card-image {
+    /* Imagen con % pa que se adapte al ancho del contenedor */
     display: block;
     width: 100%;
-    height: 200px;
+
+    /* Altura en rem para mantener proporción */
+    height: 12rem;
+
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 0.75rem;
@@ -92,13 +105,14 @@ button:hover {
 
 .card-h3 {
     color: var(--color-light);
-    font-weight:bold ;
+    font-weight: bold;
 }
 
 /* Footer */
 .site-footer {
     background-color: var(--color-black);
     color: var(--color-light);
+    /* Texto centrado y padding con rem pa adaptarse a cualquier resolución */
     text-align: center;
     padding: 2rem 1rem;
 }

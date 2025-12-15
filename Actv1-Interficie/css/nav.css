@@ -1,17 +1,16 @@
-/* NAVBAR RESPONSIVE (MOBILE FIRST) */
-
+/* Aquí se edita para móvil */
 .site-header {
     background-color: var(--color-black);
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem; /* Padding relativo para adaptarse a cualquier resolución */
 }
 
 .site-nav {
     display: flex;
-    justify-content: flex-start; /* móvil: contenido a la izquierda */
+    justify-content: flex-start; /* se aliena to a la izquierda */
     align-items: center;
 }
 
-/* Botón hamburguesa (móvil) */
+/* Botón hamburguesa */
 .nav-toggle {
     background: none;
     border: none;
@@ -28,23 +27,23 @@
     border-radius: 999px;
 }
 
-/* Lista de enlaces (móvil: desplegable desde la izquierda) */
+/* Lista de enlaces */
 .nav-list {
     list-style: none;
     position: absolute;
     top: 3.5rem;
-    left: 1rem;                /* antes right, ahora left para que salga desde la izquierda */
+    left: 1rem;
     background-color: var(--color-black);
-    padding: 1rem;
+    padding: 1rem; /* Padding relativo */
     border-radius: 0.5rem;
     display: none;
     flex-direction: column;
     gap: 0.5rem;
-    min-width: 10rem;
+    min-width: 10rem; /* Anchura mínima para que el menú sea usable */
 }
 
 .nav-list.nav-list--open {
-    display: flex;
+    display: flex; /* Muestro el menú cuando se abre */
 }
 
 .nav-list a {
@@ -52,7 +51,7 @@
     text-decoration: none;
     font-weight: 700;
     font-size: 1rem;
-    padding: 0.4rem 0.75rem;
+    padding: 0.4rem 0.75rem; /* Padding consistente para cualquier resolución */
     border-radius: 0.25rem;
     transition: background 0.2s ease, transform 0.15s ease;
 }
@@ -62,10 +61,11 @@
     transform: translateY(-0.08rem);
 }
 
-/* ESCRITORIO (>= 768px) */
+
+/* media queri pa editar en desktop */
 @media (min-width: 48rem) {
     .nav-toggle {
-        display: none;
+        display: none; /* se oculta el botón hamburguesa en pantallas grandes */
     }
 
     .site-nav {
@@ -73,14 +73,13 @@
     }
 
     .nav-list {
-        position: static;
+        position: static; /* Layout horizontal */
         display: flex;
-        flex-direction: row;
+        flex-direction: row; /* Cambio de columna a fila  */
         align-items: center;
         justify-content: center;
-        background: none;
-        padding: 0;
-        border-radius: 0;
-        gap: 2rem;
+        background: none; /* Elimino fondo del menu móvil */
+        padding: 0; /* Padding eliminado  */
+        gap: 2rem; /* Espacio horizontal entre enlaces */
     }
 }
